@@ -68,6 +68,11 @@
 
         <button type="submit">Send Message</button>
       </form>
+
+      <div id="contact-popup" class="popup hidden">
+        <span class="close-btn" onclick="closeContactPopup()">&times;</span>
+        <p>📬 Your message has been sent! We’ll get back to you shortly.</p>
+      </div>      
     </div>
   </main>
 
@@ -76,5 +81,43 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const contactForm = document.querySelector('.contact-form');
+    const contactPopup = document.getElementById('contact-popup');
+  
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+  
+      const formData = new FormData(contactForm);
+  
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData
+        });
+  
+        if (response.ok) {
+          contactPopup.classList.remove('hidden');
+          setTimeout(() => {
+            contactPopup.classList.add('visible');
+          }, 10);
+          contactForm.reset();
+        } else {
+          alert('There was an error sending your message.');
+        }
+      } catch (error) {
+        console.error('Contact form error:', error);
+        alert('There was a problem submitting the form.');
+      }
+    });
+  
+    function closeContactPopup() {
+      contactPopup.classList.remove('visible');
+      setTimeout(() => {
+        contactPopup.classList.add('hidden');
+      }, 300);
+    }
+  </script>  
 </body>
 </html>
