@@ -188,6 +188,43 @@ h1, h2, h3, h4 {
     min-width: 200px;
 }
 
+/* Pop Up Message */
+.popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: #FFF8F0;
+    color: #3e2b21;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .popup.visible {
+    opacity: 1;
+  }
+  
+  .popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 1.5rem;
+    color: #b47c5a;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }  
 
 /* Footer */
 footer {
