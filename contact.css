@@ -1,0 +1,255 @@
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    background-color: #fffaf5;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding-left: 10px;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: black !important;
+    text-decoration: none;
+  }
+  
+  .navbar-collapse {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 2rem;
+  }
+  
+  .navbar-brand:hover {
+    color: rgb(71, 71, 71) !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(38, 38, 38) !important;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: black !important;
+  }
+  
+  /* Title Section */
+  .hero-image-section {
+    position: relative;
+    min-height: 85vh;
+    background-image: url('baking.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Contact Section */
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+    background-color: #FADFCB;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Left Info Card */
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+    background-color: #FFF8F0; /* Creamy White */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Left Info Card */
+  .contact-left-wrapper {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    background-color: #FADFCB; /* Peach Puff */
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(191, 166, 160, 0.2); /* Iced Mocha tint */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    align-self: center;
+  }
+  
+  .contact-left h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    color: black; 
+  }
+  
+  .contact-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black; 
+    margin-bottom: 1.5rem;
+  }
+  
+  .email-box {
+    display: flex;
+    align-items: center;
+    background-color: #F6CED8; /* Rosewater */
+    padding: 0.75rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: black; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .email-box a {
+    color: black; 
+    text-decoration: none;
+    margin-left: 0.5rem;
+  }
+  
+  /* Right Contact Form */
+  .contact-form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 800px;
+    background-color: #FADFCB; /* Peach Puff */
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(191, 166, 160, 0.15);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: black; 
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #D8BFAA; /* Toffee Beige */
+    background-color: #fff;
+    color: #5c4036;
+    transition: border 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #FADADD; /* Lush Pink */
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    background-color: #E6DAF0; /* Lavender Mist */
+    color: #4b2e19;
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #FADADD; /* Lush Pink */
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 3rem 1rem;
+    }
+  
+    .contact-left-wrapper,
+    .contact-form {
+      max-width: 100%;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2e1f15;
+    color: #fffaf0;
+    text-align: center;
+    padding: 20px;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  

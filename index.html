@@ -79,6 +79,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        const menuSection = document.querySelector('.menu-section');
+        const menuItems = document.querySelectorAll('.menu-item');
+      
+        const sectionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Animate entire section
+              menuSection.classList.add('visible');
+      
+              // Animate each item with delay
+              menuItems.forEach((item, index) => {
+                setTimeout(() => {
+                  item.classList.add('visible');
+                }, index * 200); // 200ms stagger
+              });
+      
+              sectionObserver.unobserve(menuSection); // Only animate once
+            }
+          });
+        }, {
+          threshold: 0.3
+        });
+      
+        sectionObserver.observe(menuSection);
+      </script>
+          
 </body>
 
 </html>

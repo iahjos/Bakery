@@ -301,6 +301,32 @@ footer {
     }
 }
 
+/* CSS Animation for Scrol */
+.menu-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .menu-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Initial state for each item */
+  .menu-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When visible, slide up */
+  .menu-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 /* Small phones (480px and below) */
 @media (max-width: 480px) {
     .text-block h2 {
