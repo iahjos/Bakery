@@ -1,5 +1,3 @@
-// pages/api/order.js
-
 import { IncomingForm } from 'formidable';
 import nodemailer from 'nodemailer';
 
@@ -9,15 +7,17 @@ export const config = {
   },
 };
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method === 'POST') {
     const form = new IncomingForm();
 
-    form.parse(req, async (err, fields) => {
-      if (err) {
-        console.error('Form parsing error:', err);
-        return res.status(500).json({ error: 'Error processing the form.' });
-      }
+    try {
+      const fields = await new Promise((resolve, reject) => {
+        form.parse(req, (err, fields) => {
+          if (err) reject(err);
+          else resolve(fields);
+        });
+      });
 
       const {
         firstName,
@@ -25,7 +25,8 @@ export default function handler(req, res) {
         email,
         chocoQty,
         macadamiaQty,
-        bundleQty
+        bundleQty,
+        notes
       } = fields;
 
       if (!firstName || !lastName || !email) {
@@ -35,8 +36,8 @@ export default function handler(req, res) {
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: process.env.EMAIL_USER,      // Your Gmail address
-          pass: process.env.EMAIL_PASS,      // Your Gmail App Password
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
         },
       });
 
@@ -51,17 +52,18 @@ export default function handler(req, res) {
           <p><strong>Chocolate Chip Cookies:</strong> ${chocoQty || 0}</p>
           <p><strong>Macadamia Cookies:</strong> ${macadamiaQty || 0}</p>
           <p><strong>Cookie Bundles:</strong> ${bundleQty || 0}</p>
+          <p><strong>Special Requests:</strong> ${notes || 'None'}</p>
         `,
       };
 
-      try {
-        await transporter.sendMail(mailOptions);
-        return res.status(200).json({ message: 'Order submitted successfully!' });
-      } catch (error) {
-        console.error('Email error:', error);
-        return res.status(500).json({ error: 'Email failed to send.' });
-      }
-    });
+      await transporter.sendMail(mailOptions);
+      return res.status(200).json({ message: 'Order submitted successfully!' });
+
+    } catch (error) {
+      console.error('Server error:', error);
+      return res.status(500).json({ error: 'Server error while processing order.' });
+    }
+
   } else {
     res.status(405).json({ error: 'Method Not Allowed' });
   }
