@@ -55,9 +55,11 @@ h1, h2, h3, h4 {
 
 /* New Menu Section (with pricing) */
 .menu-section {
-    background-color: #fdf5ef;
+    background-color: #BFA6A0;
     padding: 80px 20px;
     text-align: center;
+    min-height: 85vh;
+    height: 100%;
 }
 
 .menu-title {
@@ -112,7 +114,7 @@ h1, h2, h3, h4 {
 
 /* Order Section */
 .order-section {
-    background-color: #FFF8F0;
+    background-color: #D8BFAA;
     padding: 80px 20px;
     text-align: center;
 }
