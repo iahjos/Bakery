@@ -1,0 +1,334 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Navbar */
+.navbar {
+    padding-left: 10px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: black !important;
+    text-decoration: none;
+}
+
+.navbar-collapse {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.navbar-brand:hover {
+    color: rgb(71, 71, 71) !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(38, 38, 38) !important;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: black !important;
+}
+
+/* Home Section */
+.home-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #FADADD; /* optional soft background */
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.text-block {
+    flex: 1;
+    min-width: 280px;
+    padding-right: 20px;
+}
+
+.text-block h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.text-block p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.emphasize {
+    font-weight: bold;
+    color: #d2691e; /* warm cookie brown */
+    font-style: italic;
+}
+
+.image-block {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.cookie-img {
+    max-width: 400px;
+    width: 80%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* About Section */
+.about-section {
+    min-height: 40vh;
+    height: 100%;
+    background-color: #FFF8F0; /* soft background, adjust to fit your theme */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #222;
+    font-weight: 500;
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: #f5e9df;
+    min-height: 100vh;
+    height: 100%;
+    text-align: center;    
+    align-content: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.menu-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #2b2b2b;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    width: 350px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05);
+}
+
+.menu-item h4 {
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+.menu-button {
+    margin-top: 3rem;
+}
+
+.order-now-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #2e1f15;
+    color: #fffaf6;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-now-btn:hover {
+    background-color: #513927;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #2e1f15;
+    color: #fffaf0;
+    text-align: center;
+    padding: 20px;
+    min-height: 15vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* --------------------------------
+   Responsive Design - Media Queries
+----------------------------------*/
+
+/* Tablets and smaller screens (768px and below) */
+@media (max-width: 768px) {
+    .home-content,
+    .menu-items {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .cookie-img {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .text-block h2 {
+        font-size: 2.2rem;
+    }
+
+    .text-block p {
+        font-size: 1.1rem;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .menu-item {
+        width: 80%;
+    }
+
+    .menu-item h4 {
+        font-size: 1.5rem;
+    }
+
+    .menu-title {
+        font-size: 2.5rem;
+    }
+
+    .order-now-btn {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+    .navbar-nav {
+    width: 100%;
+    text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+    margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+    .text-block h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-block p {
+        font-size: 1rem;
+    }
+
+    .about-text {
+        font-size: 1.05rem;
+    }
+
+    .menu-item img {
+        height: 280px;
+    }
+
+    .menu-title {
+        font-size: 2rem;
+    }
+
+    .menu-item h4 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 16px;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Crumbs Bakery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Sweet Crumbs Bakery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="order.html">Order</a></li>                   
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>      
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <h2 class="menu-title">Order</h2>
+        <div class="menu-items">
+            <div class="menu-item item-1">
+                <img src="ChocolateChipCookie.jpg" alt="Chocolate Chip Cookie">
+                <h4>Chocolate Chip Cookie</h4>
+                <p class="price">$2.00 each</p>
+            </div>
+            <div class="menu-item item-2">
+                <img src="MacadamiaCookie.webp" alt="Macadamia Cookie">
+                <h4>Macadamia Cookie</h4>
+                <p class="price">$2.25 each</p>
+            </div>
+            <div class="menu-item item-3">
+                <img src="Both.jpeg" alt="Cookie Bundle">
+                <h4>Cookie Bundle</h4>
+                <p class="price">$10.00 per bundle</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="order" class="order-section">
+        <h2 class="order-title">Place Your Order</h2>
+        <form class="order-form" action="/api/order" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="First name">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Last name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+    
+            <div class="form-group">
+                <label for="chocoQty">Chocolate Chip Cookies:</label>
+                <input type="number" id="chocoQty" name="chocoQty" min="0" placeholder="0">
+            </div>
+    
+            <div class="form-group">
+                <label for="macadamiaQty">Macadamia Cookies:</label>
+                <input type="number" id="macadamiaQty" name="macadamiaQty" min="0" placeholder="0">
+            </div>
+    
+            <div class="form-group">
+                <label for="bundleQty">Cookie Bundles:</label>
+                <input type="number" id="bundleQty" name="bundleQty" min="0" placeholder="0">
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Special Requests:</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Let us know if you have any special instructions!"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2025 Sweet Crumbs Bakery</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
