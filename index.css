@@ -36,7 +36,7 @@ h1, h2, h3, h4 {
 .navbar-collapse {
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
     padding-right: 2rem;
 }
 

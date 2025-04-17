@@ -10,44 +10,44 @@
   h1, h2, h3, h4 {
     font-family: 'Quicksand', sans-serif;
   }
-  
-  /* Navbar */
-  .navbar {
-    padding-left: 10px;
-  }
-  
-  .navbar-nav {
-    margin-left: auto;
-  }
-  
-  .navbar-brand {
-    font-size: 24px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: black !important;
-    text-decoration: none;
-  }
-  
-  .navbar-collapse {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 2rem;
-  }
-  
-  .navbar-brand:hover {
-    color: rgb(71, 71, 71) !important;
-  }
-  
-  .navbar-nav .nav-link {
-    color: rgb(38, 38, 38) !important;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: black !important;
-  }
+
+/* Navbar */
+.navbar {
+  padding-left: 10px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: black !important;
+  text-decoration: none;
+}
+
+.navbar-collapse {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center !important;
+  padding-right: 2rem;
+}
+
+.navbar-brand:hover {
+  color: rgb(71, 71, 71) !important;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(38, 38, 38) !important;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: black !important;
+}
   
   /* Title Section */
   .hero-image-section {
@@ -277,3 +277,17 @@
     font-weight: 400;
   }
   
+  @media (max-width: 768px) {
+    .navbar-nav {
+    width: 100%;
+    text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+    margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    }
+}
