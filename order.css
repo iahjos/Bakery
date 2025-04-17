@@ -1,3 +1,7 @@
+* {
+    font-family: 'Playfair Display', serif;
+  }  
+
 body {
     margin: 0;
     padding: 0;
@@ -7,11 +11,11 @@ body {
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Navbar */
@@ -25,7 +29,7 @@ h1, h2, h3, h4 {
 
 .navbar-brand {
     font-size: 24px;
-    letter-spacing: 1px;
+    letter-spacing: 0.2rem;
     font-weight: bold;
     color: black !important;
     text-decoration: none;

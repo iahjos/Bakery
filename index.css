@@ -1,3 +1,6 @@
+* {
+    font-family: 'Playfair Display', serif;
+  }
 
 body {
     margin: 0;
@@ -8,11 +11,11 @@ body {
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 
@@ -27,7 +30,7 @@ h1, h2, h3, h4 {
 
 .navbar-brand {
     font-size: 24px;
-    letter-spacing: 1px;
+    letter-spacing: 0.2rem;
     font-weight: bold;
     color: black !important;
     text-decoration: none;
@@ -82,7 +85,25 @@ h1, h2, h3, h4 {
 .text-block h2 {
     font-size: 4rem;
     margin-bottom: 10px;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
 }
+
+.text-block h3 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: #8B0000;
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: #8B0000;
+    width: 200px;
+  }
+
+  
 
 .text-block p {
     font-size: 1.5rem;
@@ -90,8 +111,7 @@ h1, h2, h3, h4 {
 }
 
 .emphasize {
-    font-weight: bold;
-    color: #d2691e; /* warm cookie brown */
+    color: #DC143C; 
     font-style: italic;
 }
 
@@ -330,11 +350,11 @@ footer {
 /* Small phones (480px and below) */
 @media (max-width: 480px) {
     .text-block h2 {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
 
     .text-block p {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .about-text {
