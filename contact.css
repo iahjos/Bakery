@@ -23,7 +23,7 @@
 
 .navbar-brand {
   font-size: 24px;
-  letter-spacing: 0.2rem;
+  text-transform: uppercase;
   font-weight: bold;
   color: black !important;
   text-decoration: none;
